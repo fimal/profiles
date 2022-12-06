@@ -1,1 +1,388 @@
-test
+apiVersion: waas.radware.com/v1beta1
+kind: Profile
+metadata:
+  annotations:
+    radware/protectionMode: IMMEDIATE
+    radware/technology: BASIC
+    radware/A: 3.3.3.3
+    radware/CNAME: 1.v1.radware.net
+    radware/ipRanges: 3.3.3.3
+    radware/region: ASIA_SOUTHEAST_1
+  name:  hackazone.com-profile
+  namespace: radware
+  labels:
+    release: hackazone.com-profile
+spec:
+  policies:
+  - classifiers:
+    - hostname: '*'
+      id: classifier1
+      path:
+        operand: Prefix
+        value: /
+      protectionId: protection1
+    name: hackazone.com-profile-policy
+    operatorEmail: support@radware.com
+    protections:
+    - expressions:
+        advExcludes:
+        - parameter:
+            name: ""
+          path:
+            value: /
+          ruleIDs:
+          - FSPA01
+          - ATPANP
+          - FSPA02
+          
+        opMode: Passive
+      id: protection1
+      signatures:
+        advExcludes:
+        - parameter:
+            name: ""
+          path:
+            value: ""
+          ruleIDs:
+          - 10454
+          zone: uri
+        
+        - parameter:
+            name: ""
+          path:
+            value: ""
+          ruleIDs:
+          - 6904
+          zone: uri
+        
+        - parameter:
+            name: ""
+          path:
+            value: ""
+          ruleIDs:
+          - 10468
+          zone: uri
+        
+        - parameter:
+            name: ""
+          path:
+            value: ""
+          ruleIDs:
+          - 10487
+          zone: uri
+        
+        - parameter:
+            name: ""
+          path:
+            value: ""
+          ruleIDs:
+          - 9359
+          zone: uri
+        
+        - parameter:
+            name: ""
+          path:
+            value: ""
+          ruleIDs:
+          - 9229
+          zone: uri
+        
+        opMode: Active
+      whitelist:
+        excludes:
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - POST
+          pattern: "/"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - GET
+          pattern: "*.woff"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - GET
+          pattern: "*.jpg"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - GET
+          pattern: "*.xml"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - GET
+          pattern: "*.htm"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - GET
+          pattern: "*.csv"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - GET
+          pattern: "*.gif"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - GET
+          pattern: "*.eot"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - GET
+          pattern: "*.xsl"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - GET
+          pattern: "*.pdf"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - GET
+          pattern: "*.pptx"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - POST
+          pattern: "*.xml"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - GET
+          pattern: "/"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - GET
+          pattern: "*.js"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - GET
+          pattern: "*.do"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - GET
+          pattern: "*.doc"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - GET
+          pattern: "*.asp"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - GET
+          pattern: "*.bmp"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - GET
+          pattern: "*.jsp"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - GET
+          pattern: "*.axd"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - GET
+          pattern: "*.mp4"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - POST
+          pattern: "*.no-extension"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - GET
+          pattern: "*.svg"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - GET
+          pattern: "*.wmv"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - POST
+          pattern: "*.asp"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - POST
+          pattern: "*.aspx"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - GET
+          pattern: "*.no-extension"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - GET
+          pattern: "*.php"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - GET
+          pattern: "*.ppt"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - POST
+          pattern: "*.php"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - GET
+          pattern: "*.mp3"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - GET
+          pattern: "*.tif"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - GET
+          pattern: "*.png"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - GET
+          pattern: "*.shtml"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - GET
+          pattern: "*.ico"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - POST
+          pattern: "*.jsp"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - GET
+          pattern: "*.zip"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - GET
+          pattern: "*.woff2"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - GET
+          pattern: "*.docx"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - GET
+          pattern: "*.html"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - GET
+          pattern: "*.jpeg"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - GET
+          pattern: "*.css"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - GET
+          pattern: "*.json"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - GET
+          pattern: "*.xlsx"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - GET
+          pattern: "*.aspx"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - GET
+          pattern: "*.xls"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - GET
+          pattern: "*.ttf"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - POST
+          pattern: "*.json"
+        
+        - isPatternRelative: false
+          isRegex: False
+          methods:
+          - GET
+          pattern: "*.ashx"
+        
+        opMode: Active
+---
