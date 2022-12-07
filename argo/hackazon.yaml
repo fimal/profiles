@@ -11,12 +11,12 @@ spec:
   operatorEmail: fimal@radware.com
   maps:
   - domains:
-    - moreandmore.vladi
-    - moreandmore.vladi:*
+    - moreandmore.chen
+    - moreandmore.chen:*
     operatorEmail: "fimal@radware.com"
     profile:
       
-      name: moreandmore.vladi
+      name: moreandmore.chen
       namespace: test
 ---
 apiVersion: waas.radware.com/v1beta1
@@ -29,10 +29,10 @@ metadata:
     radware/CNAME: 23ddddddddddddddddfffff.v1.*****.net
     radware/ipRanges: 99.199.294.99
     radware/region: ASIA_SOUTHEAST_1
-  name:  moreandmore.vladi
+  name:  moreandmore.chen
   namespace: radware
   labels:
-    release: moreandmore.vladi
+    release: moreandmore.chen
 spec:
   policies:
   - classifiers:
@@ -42,7 +42,7 @@ spec:
         operand: Prefix
         value: /
       protectionId: protection1
-    name: moreandmore.vladi-policy
+    name: moreandmore.chen-policy
     operatorEmail: support@radware.com
     protections:
     - expressions:
