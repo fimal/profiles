@@ -30,7 +30,7 @@ metadata:
     radware/ipRanges: 99.199.294.99
     radware/region: ASIA_SOUTHEAST_1
   name:  hackazon-king-demo
-  namespace: radware
+  namespace: test
   labels:
     release: hackazon-king-demo.com
 spec:
