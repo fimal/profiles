@@ -11,12 +11,12 @@ spec:
   operatorEmail: fimal@radware.com
   maps:
   - domains:
-    - hackazon-king-demo.com
-    - hackazon-king-demo.com:*
+    - hackazon-king1-demo.com
+    - hackazon-king1-demo.com:*
     operatorEmail: "fimal@radware.com"
     profile:
       
-      name: hackazon-king-demo
+      name: hackazon-king1-demo
       namespace: test
 ---
 apiVersion: waas.radware.com/v1beta1
@@ -29,10 +29,10 @@ metadata:
     radware/CNAME: 23ddddddddddddddddfffff.v1.*****.net
     radware/ipRanges: 99.199.294.99
     radware/region: ASIA_SOUTHEAST_1
-  name:  hackazon-king-demo
+  name:  hackazon-king1-demo
   namespace: test
   labels:
-    release: hackazon-king-demo.com
+    release: hackazon-king1-demo.com
 spec:
   policies:
   - classifiers:
@@ -42,7 +42,7 @@ spec:
         operand: Prefix
         value: /
       protectionId: protection1
-    name: hackazon-king-demo.com-policy
+    name: hackazon-king1-demo.com-policy
     operatorEmail: support@radware.com
     protections:
     - activityTracking:
