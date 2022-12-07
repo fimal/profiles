@@ -22,7 +22,7 @@ spec:
         value: /
       protectionId: protection1
     name: hackazone.com-profile-policy
-    operatorEmail: chensa@radware.com
+    operatorEmail: chen@radware.com
     protections:
     - expressions:
         advExcludes:
