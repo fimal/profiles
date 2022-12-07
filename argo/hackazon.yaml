@@ -1,17 +1,38 @@
+---
+# mapping sample
+apiVersion: waas.radware.com/v1beta1
+kind: Mapping
+metadata:
+  name:  radware
+  namespace: test
+  labels:
+    release: waas
+spec:
+  operatorEmail: fimal@radware.com
+  maps:
+  - domains:
+    - moreandmore.vladi
+    - moreandmore.vladi:*
+    operatorEmail: "fimal@radware.com"
+    profile:
+      
+      name: moreandmore.vladi
+      namespace: test
+---
 apiVersion: waas.radware.com/v1beta1
 kind: Profile
 metadata:
   annotations:
     radware/protectionMode: IMMEDIATE
     radware/technology: BASIC
-    radware/A: 3.3.3.3
-    radware/CNAME: 1.v1.radware.net
-    radware/ipRanges: 3.3.3.3
+    radware/A: 99.199.294.99
+    radware/CNAME: 23ddddddddddddddddfffff.v1.*****.net
+    radware/ipRanges: 99.199.294.99
     radware/region: ASIA_SOUTHEAST_1
-  name:  hackazone.com-profile
+  name:  moreandmore.vladi
   namespace: radware
   labels:
-    release: hackazone.com-profile
+    release: moreandmore.vladi
 spec:
   policies:
   - classifiers:
@@ -21,8 +42,8 @@ spec:
         operand: Prefix
         value: /
       protectionId: protection1
-    name: hackazone.com-profile-policy
-    operatorEmail: chen@radware.com
+    name: moreandmore.vladi-policy
+    operatorEmail: support@radware.com
     protections:
     - expressions:
         advExcludes:
@@ -45,48 +66,42 @@ spec:
             value: ""
           ruleIDs:
           - 10454
-          zone: uri
-        
+          zone: 
         - parameter:
             name: ""
           path:
             value: ""
           ruleIDs:
           - 6904
-          zone: uri
-        
+          zone: 
         - parameter:
             name: ""
           path:
             value: ""
           ruleIDs:
           - 10468
-          zone: uri
-        
+          zone: 
         - parameter:
             name: ""
           path:
             value: ""
           ruleIDs:
           - 10487
-          zone: uri
-        
+          zone: 
         - parameter:
             name: ""
           path:
             value: ""
           ruleIDs:
           - 9359
-          zone: uri
-        
+          zone: 
         - parameter:
             name: ""
           path:
             value: ""
           ruleIDs:
           - 9229
-          zone: uri
-        
+          zone: 
         opMode: Active
       whitelist:
         excludes:
