@@ -42,7 +42,7 @@ spec:
         operand: Prefix
         value: /
       protectionId: protection1
-    name: hackazon-king-demo.com-policy
+    name: hackazon-king-demo.com
     operatorEmail: support@radware.com
     protections:
     - activityTracking:
