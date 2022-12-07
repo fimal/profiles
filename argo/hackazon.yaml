@@ -11,12 +11,12 @@ spec:
   operatorEmail: fimal@radware.com
   maps:
   - domains:
-    - moreandmore.chen
-    - moreandmore.chen:*
+    - hackazon-king-demo.com
+    - hackazon-king-demo.com:*
     operatorEmail: "fimal@radware.com"
     profile:
       
-      name: moreandmore.chen
+      name: hackazon-king-demo
       namespace: test
 ---
 apiVersion: waas.radware.com/v1beta1
@@ -29,10 +29,10 @@ metadata:
     radware/CNAME: 23ddddddddddddddddfffff.v1.*****.net
     radware/ipRanges: 99.199.294.99
     radware/region: ASIA_SOUTHEAST_1
-  name:  moreandmore.chen
+  name:  hackazon-king-demo
   namespace: radware
   labels:
-    release: moreandmore.chen
+    release: hackazon-king-demo.com
 spec:
   policies:
   - classifiers:
@@ -42,9 +42,13 @@ spec:
         operand: Prefix
         value: /
       protectionId: protection1
-    name: moreandmore.chen-policy
+    name: hackazon-king-demo.com-policy
     operatorEmail: support@radware.com
     protections:
+    - activityTracking:
+        blockPeriod: 1m
+        opMode: Active
+        rate: 100m    
     - expressions:
         advExcludes:
         - parameter:
