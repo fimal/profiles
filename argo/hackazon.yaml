@@ -4,7 +4,7 @@ apiVersion: waas.radware.com/v1beta1
 kind: Mapping
 metadata:
   annotations:
-    radware/generationNumber: "29503"
+    radware/generationNumber: "24147"
   name:  radware
   namespace: test
   labels:
@@ -25,7 +25,7 @@ apiVersion: waas.radware.com/v1beta1
 kind: Profile
 metadata:
   annotations:
-    radware/generationNumber: "4870"
+    radware/generationNumber: "13436"
     radware/protectionMode: IMMEDIATE
     radware/technology: BASIC
     radware/A: 99.199.294.99
