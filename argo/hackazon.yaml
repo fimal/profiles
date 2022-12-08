@@ -4,7 +4,7 @@ apiVersion: waas.radware.com/v1beta1
 kind: Mapping
 metadata:
   annotations:
-    radware/generationNumber: "18797"
+    radware/generationNumber: "43599"
   name:  radware
   namespace: test
   labels:
@@ -25,7 +25,7 @@ apiVersion: waas.radware.com/v1beta1
 kind: Profile
 metadata:
   annotations:
-    radware/generationNumber: "2266"
+    radware/generationNumber: "37044"
     radware/protectionMode: IMMEDIATE
     radware/technology: BASIC
     radware/A: 99.199.294.99
@@ -51,7 +51,7 @@ spec:
     - activityTracking:
         blockPeriod: 1m
         opMode: Active
-        rate: 100m    
+        rate: 5m    
       expressions:
         advExcludes:
         - parameter:
